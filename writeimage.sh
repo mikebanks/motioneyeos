@@ -158,3 +158,4 @@ umount $BOOT
 rmdir $BOOT
 
 msg "you can now remove the sdcard"
+
