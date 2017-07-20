@@ -10,3 +10,4 @@ PYTHON_PICAMERA_SITE = https://pypi.python.org/packages/ab/53/54a20f53e61df5c329
 PYTHON_PICAMERA_SETUP_TYPE = distutils
 
 $(eval $(python-package))
+

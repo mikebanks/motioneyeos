@@ -33,8 +33,6 @@ rm -rf $TARGET/usr/share/ffmpeg/
 rm -rf $TARGET/usr/share/perl5/
 rm -rf $TARGET/usr/share/common-lisp/
 
-find $TARGET -name '*libmount*' | xargs rm -rf
-
 # various binaries
 rm -f $TARGET/bin/more
 rm -f $TARGET/bin/wdctl
@@ -172,11 +170,15 @@ rm -f $TARGET/usr/sbin/ctdb*
 rm -f $TARGET/usr/sbin/winbindd
 rm -f $TARGET/usr/share/perl5
 
+# useless mongodb binaries
+rm -f $TARGET/usr/bin/mongos
+rm -f $TARGET/usr/bin/mongoperf
+
 # unused python folders
 rm -rf $TARGET/usr/lib/python2.7/site-packages/samba/
 rm -rf $TARGET/usr/lib/python2.7/ensurepip/
 
-# startup scripts
+# buildroot default startup scripts
 rm -f $TARGET/etc/init.d/S01logging
 rm -f $TARGET/etc/init.d/S10udev
 rm -f $TARGET/etc/init.d/S15watchdog
@@ -187,6 +189,7 @@ rm -f $TARGET/etc/init.d/S20urandom
 rm -f $TARGET/etc/init.d/S80dhcp-relay
 rm -f $TARGET/etc/init.d/S80dhcp-server
 rm -f $TARGET/etc/init.d/S91smb
+rm -f $TARGET/etc/init.d/S99motion
 
 # other unwanted dirs
 rm -rf $TARGET/data/*
